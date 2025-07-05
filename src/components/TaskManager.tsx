@@ -144,7 +144,7 @@ export const TaskManager = () => {
             </CardContent>
           </Card>
         ) : (
-          filteredTasks.map((task, index) => (
+          filteredTasks.map((task) => (
             <Card 
               key={task.id} 
               hover 
@@ -152,7 +152,6 @@ export const TaskManager = () => {
                 'transition-all duration-300 transform',
                 task.completed && 'opacity-75'
               )}
-              style={{ animationDelay: `${index * 50}ms` }}
             >
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">

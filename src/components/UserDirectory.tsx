@@ -1,4 +1,3 @@
-
 import { useState, useMemo } from 'react';
 import { useApi } from '@/hooks/useApi';
 import { Card, CardContent, CardHeader } from './Card';
@@ -143,12 +142,11 @@ export const UserDirectory = () => {
       ) : (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {currentUsers.map((user, index) => (
+            {currentUsers.map((user) => (
               <Card 
                 key={user.id} 
                 hover 
                 className="transition-all duration-300 transform hover:scale-105"
-                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader>
                   <div className="flex items-center space-x-3">
